@@ -1,0 +1,265 @@
+{
+  "info": {
+    "_postman_id": "b599328f-a08e-474b-9d8b-48b75ab048ad",
+    "name": "Desafio Choma DEV",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "9221972",
+    "_collection_link": "https://go.postman.co/collection/9221972-b599328f-a08e-474b-9d8b-48b75ab048ad?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Consultar Apólice",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/policies",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "policies"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Deletar apólice",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/policies/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "policies",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Consultar apólice By ID",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/policies/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "policies",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Cadastrar apólice",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"firstName\" : \"Renata\",\r\n    \"lastName\": \"Freitas\",\r\n    \"cpf\": \"92930077468\",\r\n    \"birthDate\": \"1972-11-09\",\r\n    \"email\": \"renata.gustavo@gmail.com\",\r\n    \"hireDate\": \"2026-02-03\",\r\n    \"jobTitle\": \"Analista de Sistemas\",\r\n    \"salary\": 16000\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/policies",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "policies"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Editar apólice",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"firstName\" : \"Renata\",\r\n    \"lastName\": \"Freitas\",\r\n    \"cpf\": \"92930077468\",\r\n    \"birthDate\": \"1972-11-09\",\r\n    \"email\": \"renata.gustavo@gmail.com\",\r\n    \"hireDate\": \"2026-02-03\",\r\n    \"jobTitle\": \"Analista de Sistemas\",\r\n    \"salary\": 16000\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/policies/3",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "policies",
+            "3"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "clientSecret",
+        "value": "",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code_with_pkce",
+        "type": "string"
+      },
+      {
+        "key": "useBrowser",
+        "value": true,
+        "type": "boolean"
+      },
+      {
+        "key": "clientId",
+        "value": "{{client_id}}",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "{{keycloak_base_url}}/token",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "{{keycloak_base_url}}/auth",
+        "type": "string"
+      },
+      {
+        "key": "tokenName",
+        "value": "Token {{client_id}}",
+        "type": "string"
+      },
+      {
+        "key": "client_authentication",
+        "value": "header",
+        "type": "string"
+      },
+      {
+        "key": "refreshRequestParams",
+        "value": [],
+        "type": "any"
+      },
+      {
+        "key": "tokenRequestParams",
+        "value": [],
+        "type": "any"
+      },
+      {
+        "key": "authRequestParams",
+        "value": [],
+        "type": "any"
+      },
+      {
+        "key": "challengeAlgorithm",
+        "value": "S256",
+        "type": "string"
+      },
+      {
+        "key": "scope",
+        "value": "openid profile email",
+        "type": "string"
+      },
+      {
+        "key": "redirect_uri",
+        "value": "https://oauth.pstmn.io/v1/callback",
+        "type": "string"
+      },
+      {
+        "key": "addTokenTo",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          "let jsonData = pm.response.json();\r",
+          "pm.environment.set(\"token\", jsonData.token);"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: policy-management-service
+spec:
+  selector:
+    app: policy-management-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: NodePort
